@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ssh">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".Mappa"
+            android:exported="true"
+            android:parentActivityName=".Mappa"/>
+        <activity
+            android:name=".Documento"
+            android:exported="true"
+            android:parentActivityName=".Documento_o_Mappa_Scelta"/>
+        <activity
+            android:name=".doc_or_map"
+            android:exported="true" />
+        <activity
+            android:name=".Libretto"
+            android:exported="true"
+            android:parentActivityName=".Activity_Scuola" />
+        <activity
+            android:name=".Avvisi"
+            android:exported="true"
+            android:parentActivityName=".Activity_Scuola" />
+        <activity
+            android:name=".Documento_o_Mappa_Scelta"
+            android:exported="true"
+            android:parentActivityName=".Activity_Scuola" />
+        <activity
+            android:name=".Stato_salute"
+            android:exported="true"
+            android:parentActivityName=".Activity_Salute" />
+        <activity
+            android:name=".Papprendimento"
+            android:exported="true"
+            android:parentActivityName=".Activity_Salute" />
+        <activity
+            android:name=".malattie_gravi"
+            android:exported="true"
+            android:parentActivityName=".Activity_Salute" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/back" />
+
+        <activity
+            android:name=".Activity_Scuola"
+            android:exported="true"
+            android:parentActivityName=".Schermata_Principale" />
+        <activity
+            android:name=".Activity_Salute"
+            android:exported="true"
+            android:parentActivityName=".Schermata_Principale" />
+        <activity
+            android:name=".Schermata_Principale"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

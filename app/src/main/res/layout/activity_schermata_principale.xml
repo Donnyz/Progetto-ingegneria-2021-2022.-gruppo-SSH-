@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9F9E9E"
+    tools:context=".Schermata_Principale">
+
+    <Button
+        android:id="@+id/Salute_buttom"
+        android:layout_width="140dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="36dp"
+        android:background="#FF2196F3"
+        android:backgroundTint="#4CAF50"
+        android:onClick="goto_Salute"
+        android:text="@string/salute"
+        android:textColor="#212121"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Scuola_button"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Scuola_button"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UsingOnClickInXml"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/Scuola_button"
+        android:layout_width="140dp"
+        android:layout_height="130dp"
+        android:background="#FF2196F3"
+        android:onClick="goto_Scuola"
+        android:text="@string/scuola"
+        android:textColor="#212121"
+        android:textColorLink="#2196F3"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361"
+        tools:ignore="UsingOnClickInXml"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/Logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Logout"
+        android:text="@string/logout"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Scuola_button"
+        app:layout_constraintVertical_bias="0.501"
+        tools:ignore="UsingOnClickInXml"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

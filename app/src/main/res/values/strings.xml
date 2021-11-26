@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SSH</string>
+    <string name="scuola">Scuola</string>
+    <string name="logout">Logout</string>
+    <string name="salute">Salute</string>
+    <string name="problemi_di_napprendimento">Problemi di \nApprendimento</string>
+    <string name="malattie_n_gravi">Malattie \n gravi</string>
+    <string name="stato_n_salute">Stato\n Salute</string>
+    <string name="back_button">back_button</string>
+    <string name="documento">Documento</string>
+    <string name="mappa">Mappa</string>
+</resources>
