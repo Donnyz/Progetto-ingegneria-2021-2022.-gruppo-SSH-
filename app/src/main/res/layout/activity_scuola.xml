@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_Scuola"
-    android:background="#9F9E9E">
+    android:background="@color/white">
 
     <Button
         android:id="@+id/BDoc_map"

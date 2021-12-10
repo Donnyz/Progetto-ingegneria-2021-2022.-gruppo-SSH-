@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Avvisi">
+    tools:context=".Avvisi"
+    android:background="@color/white">
     <include
         layout="@layout/toolbar"
         android:id="@+id/toolbar_avvisi"

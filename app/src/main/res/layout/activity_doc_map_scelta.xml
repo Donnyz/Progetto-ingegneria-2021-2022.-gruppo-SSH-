@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="goto_mappa"
-    tools:context=".doc_or_map">
+    android:background="@color/white"
+    tools:context=".doc_map_scelta">
 
     <include
         android:id="@+id/toolbar_doc_mappa_sceltat"

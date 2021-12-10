@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class doc_or_map extends AppCompatActivity {
+public class doc_map_scelta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
