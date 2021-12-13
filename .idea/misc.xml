@@ -31,6 +31,10 @@
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/back_botton.xml" value="0.1" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/bacl.xlm" value="0.20052083333333334" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/menu.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_doc_map_scelta.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33583000772269656" />
+        <entry key="app/src/main/res/layout/activity_qr_reader.xml" value="0.13179347826086957" />
+        <entry key="app/src/main/res/layout/activity_schermata_principale.xml" value="0.1" />
       </map>
     </option>
   </component>
