@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                         if(response.code()==200){
                             Toast.makeText(MainActivity.this, "Login effettuato", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(MainActivity.this, Schermata_Principale.class));
+
                         }else {
                             Toast.makeText(MainActivity.this, "Credenziali errate", Toast.LENGTH_LONG).show();
                         }
