@@ -1,5 +1,7 @@
 package com.example.ssh;
 
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.VIBRATE;
 
@@ -81,13 +83,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean checkPermission() {
         int camera_permission = ContextCompat.checkSelfPermission(getApplicationContext(), CAMERA);
         int vibrate_permission = ContextCompat.checkSelfPermission(getApplicationContext(), VIBRATE);
-        return camera_permission == PackageManager.PERMISSION_GRANTED && vibrate_permission == PackageManager.PERMISSION_GRANTED;
+        int fine_permission = ContextCompat.checkSelfPermission(getApplicationContext(),ACCESS_FINE_LOCATION);
+        int coarse_permission = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_COARSE_LOCATION);
+         return camera_permission == PackageManager.PERMISSION_GRANTED && vibrate_permission == PackageManager.PERMISSION_GRANTED &&
+                  fine_permission == PackageManager.PERMISSION_GRANTED && coarse_permission == PackageManager.PERMISSION_GRANTED;
+
     }
 
 
     public void requestPermission() {
         int PERMISSION_REQUEST_CODE = 200;
-        ActivityCompat.requestPermissions(this, new String[]{CAMERA}, PERMISSION_REQUEST_CODE);
+
+        ActivityCompat.requestPermissions(this, new String[]{CAMERA,ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
     }
 
     @Override
@@ -97,7 +104,9 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults.length > 0) {
             boolean cameraaccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-            if (cameraaccepted) {
+            boolean fine_accepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+            boolean coarse_accepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+            if (cameraaccepted && fine_accepted && coarse_accepted) {
                 Toast.makeText(this, "Permission granted..", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Permission Denined \n You cannot use app without providing permission", Toast.LENGTH_SHORT).show();

@@ -26,6 +26,7 @@ public class Activity_Salute extends AppCompatActivity {
         startActivity(
                 new Intent(this, malattie_gravi.class)
         );
+
     }
 
     public void goto_Papprendimento(View v){
