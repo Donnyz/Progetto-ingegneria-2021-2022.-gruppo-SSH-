@@ -1,5 +1,6 @@
 package com.example.ssh;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import retrofit2.Call;
@@ -10,6 +11,6 @@ public interface RetrofitInterface {
     @POST("/login")
     Call<LoginResult> executeLogin(@Body HashMap<String,String> map);
 
-    @POST("/signup")
-    Call<Void> executeSignup(@Body HashMap<String,String> map);
+    @POST("/voti")
+    Call<ArrayList<Voto>> executeVoti(@Body HashMap<String,String> map);
 }

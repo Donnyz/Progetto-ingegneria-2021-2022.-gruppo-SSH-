@@ -28,9 +28,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class MainActivity extends AppCompatActivity {
-    private Retrofit retrofit;
-    private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:3000";
+    private static Retrofit retrofit;
+    private static RetrofitInterface retrofitInterface;
+    private static String BASE_URL = "http://10.0.2.2:3000";
+    private static Persona p = new Persona();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                         if(response.code()==200){
                             Toast.makeText(MainActivity.this, "Login effettuato", Toast.LENGTH_LONG).show();
+                            p.setCognome(response.body().getCognome());
+                            p.setNome(response.body().getNome());
+                            p.setId(response.body().getId());
                             startActivity(new Intent(MainActivity.this, Schermata_Principale.class));
 
                         }else {
@@ -76,6 +80,12 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+    public static Persona getP(){
+        return p;
+    }
+    public static RetrofitInterface getRetrofitInterface(){
+        return retrofitInterface;
     }
 
     public boolean checkPermission() {
