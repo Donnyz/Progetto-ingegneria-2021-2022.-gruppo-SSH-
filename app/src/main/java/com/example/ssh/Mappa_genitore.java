@@ -17,7 +17,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.ssh.databinding.ActivityMappaGenitoreBinding;
 
-public class Mappa extends FragmentActivity implements OnMapReadyCallback {
+public class Mappa_genitore extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityMappaGenitoreBinding binding;
@@ -58,6 +58,5 @@ public class Mappa extends FragmentActivity implements OnMapReadyCallback {
         return fine_permission == PackageManager.PERMISSION_GRANTED && coarse_permission == PackageManager.PERMISSION_GRANTED;
 
     }
-
 
 }

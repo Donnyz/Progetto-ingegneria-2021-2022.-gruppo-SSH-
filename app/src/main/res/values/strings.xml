@@ -10,4 +10,5 @@
     <string name="documento">Documento</string>
     <string name="mappa">Mappa</string>
     <string name="qr_code_visualize" />
+    <string name="title_activity_mappa_genitore">Mappa_genitore</string>
 </resources>
