@@ -15,6 +15,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".Condivisi_con_me"
+            android:exported="true"
+            android:parentActivityName=".Avvisi"/>
+        <activity
+            android:name=".Avvisi_insegnante"
+            android:exported="true"
+            android:parentActivityName=".Avvisi"/>
+        <activity
+            android:name=".Avvisi_atutti"
+            android:exported="true"
+            android:parentActivityName=".Avvisi"/>
+        <activity
+            android:name=".Valutazioni_libretto"
+            android:exported="true"
+            android:parentActivityName=".Libretto"/>
+        <activity
+            android:name=".Note_libretto"
+            android:exported="true"
+            android:parentActivityName=".Libretto"/>
+        <activity
             android:name=".Qr_result"
             android:exported="false"
             android:parentActivityName=".Qr_Reader"/>

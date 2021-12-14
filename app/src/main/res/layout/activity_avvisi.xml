@@ -4,16 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Avvisi"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".Avvisi">
+
     <include
-        layout="@layout/toolbar"
         android:id="@+id/toolbar_avvisi"
-
-        android:layout_height="wrap_content"
+        layout="@layout/toolbar"
         android:layout_width="match_parent"
-        app:layout_constraintStart_toEndOf="parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent" />
 
-        />
+    <Button
+        android:id="@+id/avvisiconme"
+        android:layout_width="219dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="424dp"
+        android:background="#4CAF50"
+        android:onClick="goto_avvisiPerMe"
+        android:text="Condivisi con me"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/toprofessori"
+        android:layout_width="214dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="268dp"
+        android:background="#009688"
+        android:onClick="goto_avvisiPerProf"
+        android:text="Avviso \n per un professore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/topeople"
+        android:layout_width="215dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="112dp"
+        android:background="#4CAF50"
+        android:onClick="goto_avvisiPerTutti"
+        android:text="Avviso generale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Avvisi_atutti">
+
+    <include
+        android:id="@+id/toolbar_avvisi_atutti"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent" />
+
+
+    <EditText
+        android:id="@+id/Parent_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Il tuo nome"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:shadowColor="@color/purple_700"
+        android:textColor="@color/black"
+        android:textColorHint="#5F5F5F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_avvisi_atutti" />
+
+    <EditText
+        android:id="@+id/object"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Oggetto dell'avviso"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="#5F5F5F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Parent_name" />
+
+    <EditText
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Data dell'avviso"
+        android:inputType="date"
+        android:textColor="@color/black"
+        android:textColorHint="#5F5F5F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/object" />
+
+    <EditText
+        android:id="@+id/contenuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Contenuto dell'avviso"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHint="#5F5F5F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data" />
+
+    <Button
+        android:id="@+id/invia_avviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="52dp"
+        android:gravity="center_horizontal"
+        android:text="Invio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenuto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
