@@ -3,7 +3,9 @@ package com.example.ssh;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.VIBRATE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -95,8 +97,11 @@ public class MainActivity extends AppCompatActivity {
         int vibrate_permission = ContextCompat.checkSelfPermission(getApplicationContext(), VIBRATE);
         int fine_permission = ContextCompat.checkSelfPermission(getApplicationContext(),ACCESS_FINE_LOCATION);
         int coarse_permission = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_COARSE_LOCATION);
-         return camera_permission == PackageManager.PERMISSION_GRANTED && vibrate_permission == PackageManager.PERMISSION_GRANTED &&
-                  fine_permission == PackageManager.PERMISSION_GRANTED && coarse_permission == PackageManager.PERMISSION_GRANTED;
+        int externalStorageW = ContextCompat.checkSelfPermission(getApplicationContext(),WRITE_EXTERNAL_STORAGE);
+        int externalStorager = ContextCompat.checkSelfPermission(getApplicationContext(),READ_EXTERNAL_STORAGE);
+
+        return camera_permission == PackageManager.PERMISSION_GRANTED && vibrate_permission == PackageManager.PERMISSION_GRANTED && PackageManager.PERMISSION_GRANTED == externalStorageW &&
+                  externalStorager == PackageManager.PERMISSION_GRANTED && fine_permission == PackageManager.PERMISSION_GRANTED && coarse_permission == PackageManager.PERMISSION_GRANTED;
 
     }
 
@@ -104,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     public void requestPermission() {
         int PERMISSION_REQUEST_CODE = 200;
 
-        ActivityCompat.requestPermissions(this, new String[]{CAMERA,ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{CAMERA,ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
     }
 
     @Override
@@ -113,13 +118,17 @@ public class MainActivity extends AppCompatActivity {
         // allows the permission to use camera.
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults.length > 0) {
-            boolean cameraaccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-            boolean fine_accepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-            boolean coarse_accepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-            if (cameraaccepted && fine_accepted && coarse_accepted) {
-                Toast.makeText(this, "Permission granted..", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Permission Denined \n You cannot use app without providing permission", Toast.LENGTH_SHORT).show();
+            for(int i = 0; i<grantResults.length;i++) {
+                boolean cameraaccepted = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                boolean fine_accepted = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                boolean externa = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                boolean coarse_accepted = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                boolean externalR = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                if (cameraaccepted && fine_accepted && externalR && coarse_accepted && externa) {
+                    Toast.makeText(this, "Permission granted..", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Permission Denined \n You cannot use app without providing permission", Toast.LENGTH_SHORT).show();
+                }
             }
         }
     }
