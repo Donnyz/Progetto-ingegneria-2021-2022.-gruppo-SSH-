@@ -4,6 +4,12 @@
 
 Repository per lo sviluppo del plugin Andoid per l'applicazione di Family Share.
 
+## Esecuzione
+Prima di eseguire l'applicazione è necessario assicurarsi di aver avviato il server node. Dentro la cartella "server node", esegui il seguente comando: 
+```
+node app.js
+```
+
 ## Installazione Linux
 Linea guida per l'installazione ed esecuzione del plugin in locale su macchina Linux.
 
