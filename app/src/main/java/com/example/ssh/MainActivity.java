@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 HashMap<String, String> map = new HashMap<>();
-                map.put("nome",nome.getText().toString());
-                map.put("cognome",cognome.getText().toString());
+                map.put("username",nome.getText().toString());
+                map.put("password",cognome.getText().toString());
                 Call<LoginResult> call = retrofitInterface.executeLogin(map);
                 call.enqueue(new Callback<LoginResult>() {
                     @Override
@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                             p.setCognome(response.body().getCognome());
                             p.setNome(response.body().getNome());
                             p.setId(response.body().getId());
+                            p.setInsegna(response.body().getInsegna());
                             startActivity(new Intent(MainActivity.this, Schermata_Principale.class));
 
                         }else {

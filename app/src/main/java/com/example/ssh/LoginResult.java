@@ -7,6 +7,7 @@ public class LoginResult {
 
     private String cognome;
     private String id;
+    private boolean insegna;
 
     public String getNome() {
         return nome;
@@ -18,5 +19,8 @@ public class LoginResult {
 
     public String getId() {
         return id;
+    }
+    public boolean getInsegna(){
+        return insegna;
     }
 }
