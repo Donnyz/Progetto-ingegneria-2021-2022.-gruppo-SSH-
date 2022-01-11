@@ -7,12 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Documento_o_Mappa_Scelta extends AppCompatActivity {
+public class Documento_o_Mappa_Scelta_professori extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doc_map_scelta);
+        setContentView(R.layout.activity_doc_map_scelta_prof);
 
 
         //toolbar

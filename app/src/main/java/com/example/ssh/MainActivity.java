@@ -11,8 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.app.Application;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +35,12 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
+
+
+
 public class MainActivity extends AppCompatActivity {
+
+
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
     private static String BASE_URL = "http://10.0.2.2:3000";
@@ -134,6 +143,28 @@ public class MainActivity extends AppCompatActivity {
     }
     public void next(View v){
         startActivity(new Intent(this, Schermata_Principale.class));
+    }
+
+
+
+    public class Notf_channel extends Application{
+        public static final String CHANNEL_ID = "channelid";
+
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate();
+            createNotificationChannel();
+        }
+
+        public void createNotificationChannel() {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                NotificationChannel sc = new NotificationChannel(CHANNEL_ID, "prova", NotificationManager.IMPORTANCE_DEFAULT);
+
+                NotificationManager m = getSystemService(NotificationManager.class);
+                m.createNotificationChannel(sc);
+
+            }
+        }
+
     }
 }
 

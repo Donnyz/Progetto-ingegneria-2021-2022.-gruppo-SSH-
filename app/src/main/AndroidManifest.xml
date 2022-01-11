@@ -7,12 +7,12 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -39,11 +39,11 @@
             android:name=".Mappa_genitore"
             android:exported="false"
             android:label="@string/title_activity_mappa_genitore"
-            android:parentActivityName=".doc_map_scelta"/>
+            android:parentActivityName=".doc_map_scelta" />
         <activity
             android:name=".add_Malattia"
             android:exported="false"
-            android:parentActivityName=".Malattie_gravi_Genitori"/>
+            android:parentActivityName=".Malattie_gravi_Genitori" />
         <activity
             android:name=".Malattie_gravi_Genitori"
             android:exported="false" />
@@ -82,11 +82,11 @@
         <activity
             android:name=".Mappa"
             android:exported="true"
-            android:parentActivityName=".Documento_o_Mappa_Scelta" />
+            android:parentActivityName=".Documento_o_Mappa_Scelta_professori" />
         <activity
             android:name=".Documento"
             android:exported="true"
-            android:parentActivityName=".Documento_o_Mappa_Scelta" />
+            android:parentActivityName=".Documento_o_Mappa_Scelta_professori" />
         <activity
             android:name=".doc_map_scelta"
             android:exported="true" />
@@ -99,7 +99,11 @@
             android:exported="true"
             android:parentActivityName=".Activity_Scuola" />
         <activity
-            android:name=".Documento_o_Mappa_Scelta"
+            android:name=".Documento_o_Mappa_Scelta_professori"
+            android:exported="true"
+            android:parentActivityName=".Activity_Scuola" />
+        <activity
+            android:name=".Documento_o_Mappa_scelta_genitori"
             android:exported="true"
             android:parentActivityName=".Activity_Scuola" />
         <activity

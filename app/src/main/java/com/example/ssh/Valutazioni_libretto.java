@@ -25,7 +25,7 @@ public class Valutazioni_libretto extends AppCompatActivity {
 
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
-    private static String BASE_URL = "http://10.0.2.2:3000";
+    private static String BASE_URL = "37.101.84.96";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

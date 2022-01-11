@@ -12,7 +12,7 @@ public class doc_map_scelta extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doc_map_scelta);
+        setContentView(R.layout.activity_doc_map_scelta_prof);
 
         Toolbar toolbar = findViewById(R.id.toolbar_doc_mappa_sceltat);
         setSupportActionBar(toolbar);

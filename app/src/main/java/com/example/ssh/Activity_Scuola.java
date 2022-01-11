@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Activity_Scuola extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +22,22 @@ public class Activity_Scuola extends AppCompatActivity {
     }
 
     public void goto_Doc_mappa(View v){
+        /*
+        if(persona.getRuolo() == "Professore") {
+            startActivity(
+                    new Intent(this, Documento_o_Mappa_Scelta_professori.class)
+            );
+        }
+        else
+        {
+         */
+
         startActivity(
-                new Intent(this, Documento_o_Mappa_Scelta.class)
-        );
-    }
+                    new Intent(this, Documento_o_Mappa_scelta_genitori.class)
+            );
+        }
+    //}
+
     public void goto_Avvisi(View v){
         startActivity(
                 new Intent(this, Avvisi.class)
