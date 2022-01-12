@@ -13,4 +13,5 @@ public interface RetrofitInterface {
 
     @POST("/voti")
     Call<ArrayList<Voto>> executeVoti(@Body HashMap<String,String> map);
+
 }

@@ -25,9 +25,10 @@ public class Documento_o_Mappa_Scelta_professori extends AppCompatActivity {
 
     public void goto_documento(View v){
         startActivity(
-                new Intent(this, Documento.class)
+                new Intent(this, Qr_Reader.class)
         );
     }
+
     public void goto_mappa(View v){
         startActivity(
                 new Intent(this, Mappa.class)

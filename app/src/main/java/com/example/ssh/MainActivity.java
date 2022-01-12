@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
-    private static String BASE_URL = "http://10.0.2.2:3000";
+    protected static String BASE_URL = "http://10.0.2.2:3000";
     private static Persona p = new Persona();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
         public void createNotificationChannel() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 NotificationChannel sc = new NotificationChannel(CHANNEL_ID, "prova", NotificationManager.IMPORTANCE_DEFAULT);
-
                 NotificationManager m = getSystemService(NotificationManager.class);
                 m.createNotificationChannel(sc);
 

@@ -1,5 +1,7 @@
 package com.example.ssh;
 
+import static com.example.ssh.MainActivity.BASE_URL;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -25,7 +27,6 @@ public class Valutazioni_libretto extends AppCompatActivity {
 
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
-    private static String BASE_URL = "37.101.84.96";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

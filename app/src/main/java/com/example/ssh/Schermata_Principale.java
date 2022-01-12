@@ -1,8 +1,17 @@
 package com.example.ssh;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.example.ssh.MainActivity.Notf_channel.CHANNEL_ID;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
@@ -25,5 +34,7 @@ public class Schermata_Principale extends AppCompatActivity {
     public void Logout(View v){
         startActivity(new Intent(this, MainActivity.class));
     }
+
+
 
 }
