@@ -27,7 +27,7 @@ public class Valutazioni_libretto extends AppCompatActivity {
 
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
-    private static String BASE_URL = "37.101.84.96";
+    private static String BASE_URL = "http://10.0.2.2:3000";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +55,7 @@ public class Valutazioni_libretto extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<Voto>>() {
             @Override
             public void onResponse(Call<ArrayList<Voto>> call, Response<ArrayList<Voto>> response) {
+
                 Toast.makeText(Valutazioni_libretto.this,  response.body().get(0).getVoto(), Toast.LENGTH_LONG).show();
                 String arr[] = new String[100];
                 for(int i=0; i<response.body().size();i++){
@@ -63,6 +64,7 @@ public class Valutazioni_libretto extends AppCompatActivity {
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, arr);
                 Mylist.setAdapter(adapter);
             }
+
 
             @Override
             public void onFailure(Call<ArrayList<Voto>> call, Throwable t) {

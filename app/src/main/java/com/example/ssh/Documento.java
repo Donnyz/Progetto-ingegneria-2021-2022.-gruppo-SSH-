@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Documento extends AppCompatActivity {
+
     public  static final String EXTRA_TEXT= "com.example.ssh.";
 
     private EditText parent_name;
