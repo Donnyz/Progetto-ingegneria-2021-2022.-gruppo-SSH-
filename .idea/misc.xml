@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Filippo/StudioProjects/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_add_malattia.xml" value="0.33" />
+        <entry key="..\:/Users/Filippo/StudioProjects/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19427083333333334" />
@@ -11,12 +13,10 @@
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisi.xml" value="0.1640625" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map_scelta.xml" value="0.22" />
-        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map_scelta_prof.xml" value="0.2015625" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_mappa.xml" value="0.178125" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_or_mapp.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_or_mappa.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_documento.xml" value="0.2" />
-        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_documento_omappa_scelta_genitori.xml" value="0.25" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_libretto.xml" value="0.178125" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_malattie_gravi.xml" value="0.2037037037037037" />
@@ -40,7 +40,9 @@
         <entry key="app/src/main/res/layout/activity_doc_map_scelta.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33583000772269656" />
         <entry key="app/src/main/res/layout/activity_qr_reader.xml" value="0.13179347826086957" />
+        <entry key="app/src/main/res/layout/activity_salute.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/activity_schermata_principale.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_valutazioni_libretto.xml" value="0.32395833333333335" />
       </map>
     </option>
   </component>

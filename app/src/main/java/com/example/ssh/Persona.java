@@ -4,9 +4,17 @@ public class Persona {
     private String nome;
     private String cognome;
     private String id;
-
+    private boolean insegna;
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public boolean getInsegna() {
+        return insegna;
+    }
+
+    public void setInsegna(boolean insegna) {
+        this.insegna = insegna;
     }
 
     public void setCognome(String cognome) {
