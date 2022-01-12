@@ -21,4 +21,7 @@ public class Voto {
     public String getId() {
         return id;
     }
+    public String toString(){
+        return "Materia: "+materia+"\nvoto: "+voto+"\ndata: "+data;
+    }
 }

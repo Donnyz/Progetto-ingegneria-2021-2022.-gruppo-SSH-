@@ -50,7 +50,9 @@ public class Valutazioni_libretto extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<Voto>> call, Response<ArrayList<Voto>> response) {
                 Toast.makeText(Valutazioni_libretto.this,  response.body().get(0).getVoto(), Toast.LENGTH_LONG).show();
-
+                Log.d("DIO", "CANE");
+                for(Voto x: response.body())
+                    Log.d("string",x.toString());
             }
 
             @Override
