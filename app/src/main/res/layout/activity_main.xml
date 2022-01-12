@@ -26,13 +26,13 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="232dp"
+        android:layout_width="249dp"
         android:layout_height="48dp"
         android:autoText="true"
+        android:autofillHints="username"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:autofillHints="username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
 
     <Button
         android:id="@+id/Login"
-        android:layout_width="200dp"
+        android:layout_width="249dp"
         android:layout_height="48dp"
         android:onClick="next"
         android:text="Login "

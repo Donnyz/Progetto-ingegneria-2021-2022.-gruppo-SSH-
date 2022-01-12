@@ -49,9 +49,7 @@ public class Valutazioni_libretto extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<Voto>>() {
             @Override
             public void onResponse(Call<ArrayList<Voto>> call, Response<ArrayList<Voto>> response) {
-                Toast.makeText(Valutazioni_libretto.this,  response.body().get(0).getVoto(), Toast.LENGTH_LONG).show();
-
-            }
+                Toast.makeText(Valutazioni_libretto.this,  response.body().get(0).getVoto(), Toast.LENGTH_LONG).show(); }
 
             @Override
             public void onFailure(Call<ArrayList<Voto>> call, Throwable t) {
