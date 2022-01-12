@@ -4,7 +4,14 @@ import static com.example.ssh.MainActivity.BASE_URL;
 
 import android.os.Bundle;
 import android.util.Log;
+<<<<<<< Updated upstream
+=======
+import android.widget.ListView;
+>>>>>>> Stashed changes
 import android.widget.Toast;
+
+import android.widget.ArrayAdapter;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -39,6 +46,10 @@ public class Valutazioni_libretto extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Gson gson = new GsonBuilder().setLenient().create();
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
@@ -50,10 +61,25 @@ public class Valutazioni_libretto extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<Voto>>() {
             @Override
             public void onResponse(Call<ArrayList<Voto>> call, Response<ArrayList<Voto>> response) {
+<<<<<<< Updated upstream
                 Toast.makeText(Valutazioni_libretto.this,  response.body().get(0).getVoto(), Toast.LENGTH_LONG).show();
 
             }
 
+=======
+
+                //listview
+                ListView Mylist = (ListView) findViewById(R.id.listView1);
+                ArrayList<String> voti = new ArrayList<String>();
+                for(int i=0; i<response.body().size();i++){
+                    voti.add(response.body().get(i).getData() + "\n" +response.body().get(i).getMateria() + ":  " +response.body().get(i).getVoto());
+                }
+
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,voti);
+                Mylist.setAdapter(adapter);
+            }
+
+>>>>>>> Stashed changes
             @Override
             public void onFailure(Call<ArrayList<Voto>> call, Throwable t) {
                 Toast.makeText(Valutazioni_libretto.this,  t.getMessage(), Toast.LENGTH_LONG).show();
