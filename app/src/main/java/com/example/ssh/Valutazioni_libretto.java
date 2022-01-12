@@ -2,6 +2,8 @@ package com.example.ssh;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,6 +40,10 @@ public class Valutazioni_libretto extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Gson gson = new GsonBuilder().setLenient().create();
 
+        //listview
+        ListView Mylist = (ListView) findViewById(R.id.listView1);
+
+
         retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
@@ -50,7 +56,12 @@ public class Valutazioni_libretto extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<Voto>> call, Response<ArrayList<Voto>> response) {
                 Toast.makeText(Valutazioni_libretto.this,  response.body().get(0).getVoto(), Toast.LENGTH_LONG).show();
-
+                String arr[] = new String[100];
+                for(int i=0; i<response.body().size();i++){
+                    arr[i]=response.body().get(i).getVoto();
+                }
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, arr);
+                Mylist.setAdapter(adapter);
             }
 
             @Override
