@@ -4,58 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#6969EC"
     tools:context=".Activity_Salute">
+
     <include
-        layout="@layout/toolbar"
         android:id="@+id/toolbar_salute"
-        android:layout_height="wrap_content"
+        layout="@layout/toolbar"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
-   />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/Bmalattie_gravi"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:onClick="goto_malattie_gravi"
-        android:text="@string/malattie_n_gravi"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="312dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="128dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Bstato_salute"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_salute"
+        tools:text="SEZIONE SALUTE" />
 
     <Button
         android:id="@+id/Bstato_salute"
-        android:layout_width="180dp"
+        android:layout_width="248dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="48dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
         android:onClick="goto_Sstato_salute"
         android:text="@string/stato_n_salute"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Bproblemi_apprendimento"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
-        app:layout_constraintStart_toEndOf="@+id/Bproblemi_apprendimento"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Bproblemi_apprendimento"
-        android:layout_width="180dp"
+        android:layout_width="248dp"
         android:layout_height="70dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="48dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
         android:onClick="goto_Papprendimento"
         android:text="@string/problemi_di_napprendimento"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Bmalattie_gravi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Bmalattie_gravi"
+        android:layout_width="248dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="82dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
+        android:onClick="goto_malattie_gravi"
+        android:text="@string/malattie_n_gravi"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Bstato_salute"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintVertical_bias="0.676" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
