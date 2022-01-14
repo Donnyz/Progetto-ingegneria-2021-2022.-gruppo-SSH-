@@ -55,33 +55,13 @@ public class Note_libretto extends AppCompatActivity {
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,note);
                 Mylist.setAdapter(adapter);
-
-                /*ArrayList<Nota> note= response.body();
-                Log.d("DIO", "DIOCANE");
-                Call<ArrayList<Persona>> call2 = retrofitInterface.executeInsegnante();
-                call2.enqueue(new Callback<ArrayList<Persona>>() {
-                    @Override
-                    public void onResponse(Call<ArrayList<Persona>> call, Response<ArrayList<Persona>> risposta) {
-
-                        for (Persona x: risposta.body()){
-                            for(Nota n: note){
-                                if(n.getInsegnante()==x.getId()){
-                                    n.setInsegnante(x.getNome() + " " +x.getCognome());
-                                }
-                            }
-                        }*/
-                        //Toast.makeText(Note_libretto.this,  note.get(0).getInsegnante(), Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailure(Call<ArrayList<Nota>> call, Throwable t) {
                 Toast.makeText(Note_libretto.this,  t.getMessage(), Toast.LENGTH_LONG).show();
             }
-                    /*@Override
-                    public void onFailure(Call<ArrayList<Persona>> call, Throwable t) {
-                        Log.d("Errore",t.getMessage());
-                        Toast.makeText(Note_libretto.this,  t.getMessage(), Toast.LENGTH_LONG).show();
-                    }*/
+
         });
     }
 }

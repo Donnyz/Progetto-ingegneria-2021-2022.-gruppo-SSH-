@@ -1,5 +1,7 @@
 package com.example.ssh;
 
+import com.google.android.gms.common.api.Status;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -20,7 +22,7 @@ public interface RetrofitInterface {
     @POST("/avvisi")
     Call<ArrayList<Avviso>> executeAvviso(@Body HashMap<String,String> map);
 
-    @POST("/insegnante")
-    Call<ArrayList<Persona>> executeInsegnante();
+    @POST("/inserimento_avvisi")
+    Call<Void> executeInsAvvisi(@Body HashMap<String,String> map);
 
 }

@@ -42,8 +42,7 @@ public class Condivisi_con_me extends AppCompatActivity { //sezione per avvisi c
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         HashMap<String, String> map = new HashMap<>();
-        map.put("nome",MainActivity.getP().getNome());
-        map.put("cognome",MainActivity.getP().getCognome());
+        map.put("id",MainActivity.getP().getId());
         Call<ArrayList<Avviso>> call = retrofitInterface.executeAvviso(map);
 
         call.enqueue(new Callback<ArrayList<Avviso>>() {
@@ -54,7 +53,7 @@ public class Condivisi_con_me extends AppCompatActivity { //sezione per avvisi c
                 ListView Mylist = (ListView) findViewById(R.id.listView1);
                 ArrayList<String> avvisi = new ArrayList<String>();
                 for(int i=0; i<response.body().size();i++){
-                    avvisi.add(response.body().get(i).getData() + "\n" +response.body().get(i).getMittente() + ":  " +response.body().get(i).getDescrizione());
+                    avvisi.add(response.body().get(i).getData() + "\n" +response.body().get(i).getOggetto() + ":  " +response.body().get(i).getDescrizione());
                 }
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,avvisi);
