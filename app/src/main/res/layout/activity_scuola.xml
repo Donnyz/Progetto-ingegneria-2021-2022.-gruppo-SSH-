@@ -4,56 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Scuola"
-    android:background="@color/white">
-
-    <Button
-        android:id="@+id/BDoc_map"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:onClick="goto_Doc_mappa"
-        android:text="Documento \n Mappa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
-
-    <Button
-        android:id="@+id/Avvisi"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:onClick="goto_Avvisi"
-        android:text="Avvisi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
-
-    <Button
-        android:id="@+id/Libretto"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
-        android:onClick="goto_Libretto"
-        android:text="Libretto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
+    android:background="#6969EC"
+    tools:context=".Activity_Scuola">
 
     <include
         layout="@layout/toolbar"
         android:id="@+id/toolbar_scuola"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         />
+
+    <Button
+        android:id="@+id/BDoc_map"
+        android:layout_width="248dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="48dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:onClick="goto_Doc_mappa"
+        android:text="Documento \n Mappa"
+        app:layout_constraintBottom_toTopOf="@+id/Avvisi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_scuola" />
+
+    <Button
+        android:id="@+id/Avvisi"
+        android:layout_width="248dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="48dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:onClick="goto_Avvisi"
+        android:text="Avvisi"
+        app:layout_constraintBottom_toTopOf="@+id/Libretto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Libretto"
+        android:layout_width="248dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="82dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:onClick="goto_Libretto"
+        android:text="Libretto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
+
+
 
 
 

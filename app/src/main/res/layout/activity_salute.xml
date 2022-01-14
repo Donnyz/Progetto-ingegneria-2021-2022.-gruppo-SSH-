@@ -17,41 +17,24 @@
 
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="312dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="128dp"
-        android:gravity="center_horizontal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#ffffff"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Bstato_salute"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_salute"
-        tools:text="SEZIONE SALUTE" />
-
     <Button
         android:id="@+id/Bstato_salute"
         android:layout_width="248dp"
         android:layout_height="70dp"
         android:layout_marginStart="81dp"
+        android:layout_marginTop="155dp"
         android:layout_marginEnd="82dp"
         android:layout_marginBottom="48dp"
         android:background="#ffffff"
-        android:textColor="#6969EC"
         android:onClick="goto_Sstato_salute"
         android:text="@string/stato_n_salute"
+        android:textColor="#6969EC"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Bproblemi_apprendimento"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_salute" />
 
     <Button
         android:id="@+id/Bproblemi_apprendimento"
