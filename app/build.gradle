@@ -31,8 +31,10 @@ android {
 }
 
 dependencies {
-
-    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3' //generare il qr code
+    def work_version = "2.7.1"
+    implementation "androidx.work:work-runtime:$work_version"
+        //implementation "androidx.concurrent:concurrent-futures:1.1.0"
+        implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3' //generare il qr code
     implementation ('eu.livotov.labs.android:CAMView:2.0.1@aar') {transitive=true} // per leggere il qr code
     implementation 'com.squareup.retrofit2:retrofit:2.3.0' //comunicare con il server
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'

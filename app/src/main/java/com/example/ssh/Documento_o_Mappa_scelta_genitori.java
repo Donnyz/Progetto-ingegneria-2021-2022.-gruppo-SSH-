@@ -9,10 +9,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.work.ListenableWorker;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkRequest;
 
 import android.annotation.SuppressLint;
-import android.app.Application;
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -26,10 +29,8 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.view.Display;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -38,6 +39,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.concurrent.TimeUnit;
 
 public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity implements OnMapReadyCallback, LocationListener {
     private Persona p;
@@ -48,18 +51,19 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity impleme
 
     //swithc preference
 
-    private static String myPref = "switch pref";
-    private static String status_on = "status_on";
-    private static String status_off = "status_off";
+    private final static String myPref = "switch pref";
+    private final static String status = "status";
+    private boolean swithc_status;
 
-    boolean swithc_status;
-    boolean on_status;
     SharedPreferences mypreference;
     SharedPreferences.Editor  myeditor;
+    WorkManager workManager;
 
 
     private Marker old = null;
     private LocationManager lm;
+
+    PeriodicWorkRequest work;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,44 +77,55 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity impleme
         s = findViewById(R.id.switch1);
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        mypreference = getSharedPreferences(myPref,MODE_PRIVATE);
-        myeditor = getSharedPreferences(myPref, MODE_PRIVATE).edit();
+        loadData();
+        updateViews();
+        work = new PeriodicWorkRequest.Builder(positionWork.class,
+                1, TimeUnit.MINUTES,2,TimeUnit.HOURS)
+                .build();
 
-        swithc_status = mypreference.getBoolean(String.valueOf(swithc_status),false);
-        on_status = mypreference.getBoolean(String.valueOf(on_status),false);
-
-        s.setChecked(swithc_status);
-        if(on_status){
-            startService(Documento_o_Mappa_scelta_genitori.this);
-        }
-        else{
-            stopService(Documento_o_Mappa_scelta_genitori.this);
-        }
+        workManager = WorkManager.getInstance(getApplicationContext());
 
         s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                saveData();
+
 
                 if(s.isChecked()){
-                    myeditor.putBoolean(String.valueOf(swithc_status),true);
-                    myeditor.putBoolean(String.valueOf(on_status),true);
-                    myeditor.apply();
-                    s.setChecked(true);
+                    workManager.enqueue(work);
 
 
                     startService(Documento_o_Mappa_scelta_genitori.this);
                 }
                 else{
+                    //qui blocchiamo invece l'invio dei dati dal server.
+
                     stopService(Documento_o_Mappa_scelta_genitori.this);
-                    myeditor.putBoolean(String.valueOf(swithc_status),false);
-                    myeditor.putBoolean(String.valueOf(on_status),false);
-                    myeditor.apply();
-                    s.setChecked(false);
                 }
             }
         });
 
         createNotificationChannel();
+
+    }
+
+
+
+    public void saveData(){
+        mypreference = getSharedPreferences(myPref,MODE_PRIVATE);
+        myeditor = getSharedPreferences(myPref, MODE_PRIVATE).edit();
+        myeditor.putBoolean(status,s.isChecked());
+        myeditor.apply();
+    }
+
+    public void loadData(){
+        mypreference = getSharedPreferences(myPref, MODE_PRIVATE);
+        myeditor = getSharedPreferences(myPref,MODE_PRIVATE).edit();
+        swithc_status = mypreference.getBoolean(status,false);
+    }
+
+    public void updateViews(){
+        s.setChecked(swithc_status);
 
     }
 
@@ -184,6 +199,8 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity impleme
 
         }
     }
+
+
     public static void creaNotifica(Context c,String titolo,String contenuto,int icona){
 
         Intent result = new Intent(c.getApplicationContext(),Documento_o_Mappa_scelta_genitori.class);
@@ -229,5 +246,6 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity impleme
         }
 
     }
+
 
 }
