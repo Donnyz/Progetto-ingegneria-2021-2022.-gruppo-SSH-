@@ -17,6 +17,9 @@ public interface RetrofitInterface {
     @POST("/note")
     Call<ArrayList<Nota>> executeNote(@Body HashMap<String,String> map);
 
+    @POST("/avvisi")
+    Call<ArrayList<Avviso>> executeAvviso(@Body HashMap<String,String> map);
+
     @POST("/insegnante")
     Call<ArrayList<Persona>> executeInsegnante();
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#6969EC"
     tools:context=".Libretto">
 
     <include
@@ -18,28 +18,31 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="342dp"
-        android:layout_height="218dp"
-        android:layout_marginTop="304dp"
-        android:background="#009688"
+        android:layout_width="249dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="344dp"
+        android:background="#ffffff"
         android:onClick="goto_note"
         android:text="Note \n Disciplinari"
-        android:textColor="#FFFFFF"
+        android:textColor="#6969EC"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_libretto" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="348dp"
-        android:layout_height="218dp"
-        android:layout_marginTop="56dp"
-        android:backgroundTint="#4CAF50"
+        android:layout_width="249dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="188dp"
+        android:background="#ffffff"
         android:onClick="goto_valutazioni"
         android:text="Valutazioni"
+        android:textColor="#6969EC"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_libretto" />
 

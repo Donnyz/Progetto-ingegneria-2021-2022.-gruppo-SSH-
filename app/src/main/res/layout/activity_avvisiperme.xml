@@ -15,23 +15,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="348dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="408dp"
-        android:text="Qui ci saranno gli avvisi condivisi con me"
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="410dp"
+        android:layout_height="585dp"
+        android:layout_below="@+id/toolbar_avvisi_perme"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:isScrollContainer="true"
         android:textAlignment="center"
-        android:textColor="#050505"
-        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_avvisi_perme"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

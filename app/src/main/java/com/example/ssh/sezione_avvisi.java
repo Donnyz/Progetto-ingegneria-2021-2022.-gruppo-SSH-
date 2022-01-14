@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Avvisi extends AppCompatActivity {
+public class sezione_avvisi extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

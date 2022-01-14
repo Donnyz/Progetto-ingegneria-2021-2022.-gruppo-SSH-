@@ -50,15 +50,15 @@
         <activity
             android:name=".Condivisi_con_me"
             android:exported="true"
-            android:parentActivityName=".Avvisi" />
+            android:parentActivityName=".sezione_avvisi" />
         <activity
             android:name=".Avvisi_insegnante"
             android:exported="true"
-            android:parentActivityName=".Avvisi" />
+            android:parentActivityName=".sezione_avvisi" />
         <activity
             android:name=".Avvisi_atutti"
             android:exported="true"
-            android:parentActivityName=".Avvisi" />
+            android:parentActivityName=".sezione_avvisi" />
         <activity
             android:name=".Valutazioni_libretto"
             android:exported="true"
@@ -95,7 +95,7 @@
             android:exported="true"
             android:parentActivityName=".Activity_Scuola" />
         <activity
-            android:name=".Avvisi"
+            android:name=".sezione_avvisi"
             android:exported="true"
             android:parentActivityName=".Activity_Scuola" />
         <activity
