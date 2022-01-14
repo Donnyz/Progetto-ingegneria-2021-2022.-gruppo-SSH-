@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#6969EC"
     tools:context=".Avvisi">
 
     <include
@@ -13,46 +13,80 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="312dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="128dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/avvisiconme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_avvisi"
+        tools:text="SEZIONE AVVISI" />
 
     <Button
         android:id="@+id/avvisiconme"
-        android:layout_width="219dp"
-        android:layout_height="141dp"
-        android:layout_marginBottom="424dp"
-        android:background="#4CAF50"
+        android:layout_width="248dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="48dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
         android:onClick="goto_avvisiPerMe"
         android:text="Condivisi con me"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topeople"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/toprofessori"
-        android:layout_width="214dp"
-        android:layout_height="141dp"
-        android:layout_marginBottom="268dp"
-        android:background="#009688"
-        android:onClick="goto_avvisiPerProf"
-        android:text="Avviso \n per un professore"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/topeople"
-        android:layout_width="215dp"
-        android:layout_height="135dp"
-        android:layout_marginBottom="112dp"
-        android:background="#4CAF50"
+        android:layout_width="248dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="48dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
         android:onClick="goto_avvisiPerTutti"
         android:text="Avviso generale"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/toprofessori"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/toprofessori"
+        android:layout_width="248dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="82dp"
+        android:background="#ffffff"
+        android:textColor="#6969EC"
+        android:onClick="goto_avvisiPerProf"
+        android:text="Avviso \n per un professore"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
