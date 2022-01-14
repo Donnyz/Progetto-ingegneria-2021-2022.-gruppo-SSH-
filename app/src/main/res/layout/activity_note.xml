@@ -16,17 +16,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="277dp"
-        android:layout_height="152dp"
-        android:gravity="center"
-        android:text="Elenco note vuoto"
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="410dp"
+        android:layout_height="585dp"
+        android:layout_below="@+id/toolbar_note_libretto"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:isScrollContainer="true"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="289dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

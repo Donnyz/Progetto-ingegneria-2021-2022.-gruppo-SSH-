@@ -40,7 +40,7 @@ public class Activity_Scuola extends AppCompatActivity {
 
     public void goto_Avvisi(View v){
         startActivity(
-                new Intent(this, Avvisi.class)
+                new Intent(this, sezione_avvisi.class)
         );
     }
     public void goto_Libretto(View v){

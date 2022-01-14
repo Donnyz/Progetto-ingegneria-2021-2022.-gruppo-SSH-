@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/other_lastname" />
 
     <Button
-        android:id="@+id/Bdocumento"
+        android:id="@+id/send_generator"
         android:layout_width="249dp"
         android:layout_height="48dp"
         android:background="#ffffff"

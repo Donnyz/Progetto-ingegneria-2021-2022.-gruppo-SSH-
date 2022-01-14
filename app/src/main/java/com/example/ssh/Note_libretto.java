@@ -3,7 +3,6 @@ package com.example.ssh;
 import static com.example.ssh.MainActivity.BASE_URL;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -45,7 +44,19 @@ public class Note_libretto extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<Nota>>() {
             @Override
             public void onResponse(Call<ArrayList<Nota>> call, Response<ArrayList<Nota>> response) {
-                ArrayList<Nota> note= response.body();
+
+                //listview
+                ListView Mylist = (ListView) findViewById(R.id.listView1);
+                ArrayList<String> note = new ArrayList<String>();
+
+                for(int i=0; i<response.body().size();i++){
+                    note.add(response.body().get(i).getData() + "\n" +response.body().get(i).getInsegnante() + ":  " +response.body().get(i).getDescrizione());
+                }
+
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,note);
+                Mylist.setAdapter(adapter);
+
+                /*ArrayList<Nota> note= response.body();
                 Log.d("DIO", "DIOCANE");
                 Call<ArrayList<Persona>> call2 = retrofitInterface.executeInsegnante();
                 call2.enqueue(new Callback<ArrayList<Persona>>() {
@@ -58,28 +69,19 @@ public class Note_libretto extends AppCompatActivity {
                                     n.setInsegnante(x.getNome() + " " +x.getCognome());
                                 }
                             }
-                        }
-                        Toast.makeText(Note_libretto.this,  note.get(0).getInsegnante(), Toast.LENGTH_LONG).show();
-                    }
-
-                    @Override
-                    public void onFailure(Call<ArrayList<Persona>> call, Throwable t) {
-                        Log.d("Errore",t.getMessage());
-                        Toast.makeText(Note_libretto.this,  t.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });
-
-
-
-
-
-
+                        }*/
+                        //Toast.makeText(Note_libretto.this,  note.get(0).getInsegnante(), Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailure(Call<ArrayList<Nota>> call, Throwable t) {
                 Toast.makeText(Note_libretto.this,  t.getMessage(), Toast.LENGTH_LONG).show();
             }
+                    /*@Override
+                    public void onFailure(Call<ArrayList<Persona>> call, Throwable t) {
+                        Log.d("Errore",t.getMessage());
+                        Toast.makeText(Note_libretto.this,  t.getMessage(), Toast.LENGTH_LONG).show();
+                    }*/
         });
     }
 }
