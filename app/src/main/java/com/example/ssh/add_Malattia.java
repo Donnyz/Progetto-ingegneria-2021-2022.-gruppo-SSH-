@@ -41,7 +41,7 @@ public class add_Malattia extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 HashMap<String, String> map = new HashMap<>();
-                map.put("id",p.getId());
+                map.put("id",MainActivity.getP().getId());
                 map.put("nome",nome_mal.getText().toString());
                 map.put("numero",numero.getText().toString());
                 map.put("descrizione",info_mal.getText().toString());
