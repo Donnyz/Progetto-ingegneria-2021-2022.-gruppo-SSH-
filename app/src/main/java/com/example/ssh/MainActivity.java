@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -77,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
                             p.setNome(response.body().getNome());
                             p.setId(response.body().getId());
                             p.setInsegna(response.body().getInsegna());
-                            startActivity(new Intent(MainActivity.this, Schermata_Principale.class));
+                            Intent persona = utils.new_intent(p,Schermata_Principale.class,getApplicationContext());
+                            startActivity(persona);
 
                         }else {
                             Toast.makeText(MainActivity.this, "Credenziali errate", Toast.LENGTH_LONG).show();
@@ -95,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public static Persona getP(){
         return p;
     }

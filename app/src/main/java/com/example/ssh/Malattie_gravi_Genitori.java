@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class Malattie_gravi_Genitori extends AppCompatActivity {
     private Button info_add;
+    Intent extra;
+    Persona p;
 
 
     @Override
@@ -17,10 +19,13 @@ public class Malattie_gravi_Genitori extends AppCompatActivity {
         setContentView(R.layout.activity_malattie_gravi_genitori);
         info_add = findViewById(R.id.aggiungi_info_malattia);
 
+        extra = getIntent();
+        p = utils.ottieni(extra);
+
     }
 
     public void next(View v){
-            startActivity(new Intent(this, add_Malattia.class));
+            startActivity(utils.new_intent(p,add_Malattia.class,getApplicationContext()));
         }
 
 }

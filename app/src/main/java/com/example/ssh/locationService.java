@@ -44,6 +44,10 @@ public class locationService extends Service {
             if (locationResult != null && locationResult.getLastLocation() != null) {
                 double latitude = locationResult.getLastLocation().getLatitude();
                 double longitude = locationResult.getLastLocation().getLongitude();
+
+                /**
+                 * qui inviare la posizione sul server
+                 * */
                 Log.d("location_update", latitude + "," + longitude);
 
 

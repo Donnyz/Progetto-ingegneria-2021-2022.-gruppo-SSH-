@@ -11,34 +11,51 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class Activity_Salute extends AppCompatActivity {
+    Intent extra;
+    Persona p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salute);
+
         Toolbar t = findViewById(R.id.toolbar_salute);
         setSupportActionBar(t);
         getSupportActionBar().setTitle("Salute");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        extra = getIntent();
+        p = utils.ottieni(extra);
+
     }
 
     public void goto_malattie_gravi(View v){
-        startActivity(
-                new Intent(this, malattie_gravi.class)
-        );
-
+        if(p.getInsegna()) {
+            startActivity(
+                    utils.new_intent(p, malattie_gravi.class, getApplicationContext())
+            );
+        }else
+            startActivity(utils.new_intent(
+                    p,
+                    Malattie_gravi_Genitori.class,
+                    getApplicationContext()
+            ));
     }
 
     public void goto_Papprendimento(View v){
         startActivity(
-                new Intent(this, Papprendimento.class)
+                utils.new_intent(p,
+                        Papprendimento.class,
+                        getApplicationContext())
         );
     }
 
     public void goto_Sstato_salute(View v){
         startActivity(
-                new Intent(this, Stato_salute.class)
+                utils.new_intent(p,
+                        Stato_salute.class,
+                        getApplicationContext())
         );
+
     }
 
 

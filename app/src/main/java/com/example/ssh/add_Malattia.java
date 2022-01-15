@@ -3,6 +3,7 @@ package com.example.ssh;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -27,5 +28,7 @@ public class add_Malattia extends AppCompatActivity {
 
     }
 
-    private void registra_malattia(){}
+    private void registra_malattia(View v){
+
+    }
 }

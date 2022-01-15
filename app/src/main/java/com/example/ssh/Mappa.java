@@ -50,7 +50,16 @@ public class Mappa extends FragmentActivity implements OnMapReadyCallback {
         checkPermission();
         mMap.setMyLocationEnabled(true);
 
+        /**
+         * qui dentro ottenere tutte le posizioni dalla mappa dei  genitoir.
+         * fatto questo si può disegnare aggiungendo un marker per ogni posizione.
+         *
+         */
     }
+
+
+
+
 
     public boolean checkPermission() {
         int fine_permission = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_FINE_LOCATION);

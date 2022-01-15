@@ -58,8 +58,6 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity  {
 
     private static final int REQUEST_CODE_LOCATION_PERMISSION =1;
 
-    //position
-    PeriodicWorkRequest periodicWork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

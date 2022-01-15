@@ -3,7 +3,9 @@ package com.example.ssh;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class Papprendimento extends AppCompatActivity {
 
@@ -16,4 +18,9 @@ public class Papprendimento extends AppCompatActivity {
         getSupportActionBar().setTitle("Problemi Apprendimento");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+    public void add_problemiDiApprendimento(View v){
+        startActivity(new Intent(this,add_problemiApprendimento.class));
+    }
+
 }

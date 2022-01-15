@@ -7,7 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+
+
 public class Activity_Scuola extends AppCompatActivity {
+
+    Intent extra;
+    Persona p;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,34 +24,29 @@ public class Activity_Scuola extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Scuola");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        extra = getIntent();
+        p = utils.ottieni(extra);
     }
 
-    public void goto_Doc_mappa(View v){
-        /*
-        if(persona.getRuolo() == "Professore") {
+    public void goto_Doc_mappa(View v) {
+        if(p.getInsegna()){
             startActivity(
-                    new Intent(this, Documento_o_Mappa_Scelta_professori.class)
+                    utils.new_intent(p,Documento_o_Mappa_Scelta_professori.class,getApplicationContext())
             );
         }
-        else
-        {
-         */
-
-        startActivity(
-                    new Intent(this, Documento_o_Mappa_scelta_genitori.class)
-            );
+        else{
+            startActivity(utils.new_intent(p,Documento_o_Mappa_scelta_genitori.class,getApplicationContext()));
         }
-    //}
+    }
 
     public void goto_Avvisi(View v){
         startActivity(
-                new Intent(this, sezione_avvisi.class)
+        utils.new_intent(p,sezione_avvisi.class,getApplicationContext())
         );
     }
     public void goto_Libretto(View v){
-        startActivity(
-                new Intent(this, Libretto.class)
-        );
+        startActivity(utils.new_intent(p,Libretto.class,getApplicationContext()));
     }
 
 
