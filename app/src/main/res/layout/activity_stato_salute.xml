@@ -33,8 +33,8 @@
 
     <Button
         android:id="@+id/addStato"
-        android:layout_width="127dp"
-        android:layout_height="49dp"
+        android:layout_width="141dp"
+        android:layout_height="57dp"
         android:onClick="nuovo_stato"
         android:text="aggiungi nuovo stato"
         app:layout_constraintBottom_toBottomOf="parent"

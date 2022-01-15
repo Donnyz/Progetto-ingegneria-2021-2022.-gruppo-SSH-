@@ -20,7 +20,6 @@ public class AddStatoSalute extends AppCompatActivity{
     private EditText nome_ragazzo;
     private EditText descrizione;
     private EditText ora;
-    private EditText data;
     private Button aggiungi_stato;
     Intent extra;
     Persona p;
@@ -39,7 +38,6 @@ public class AddStatoSalute extends AppCompatActivity{
         nome_ragazzo = findViewById(R.id.nome_ragazzo);
         descrizione = findViewById(R.id.info_Malattia);
         ora = findViewById(R.id.ora);
-        data = findViewById(R.id.data);
         aggiungi_stato = findViewById(R.id.add);
         extra = getIntent();
         p = utils.ottieni(extra);
