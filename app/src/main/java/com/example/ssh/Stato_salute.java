@@ -5,6 +5,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -38,7 +40,16 @@ public class Stato_salute extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<StatoSalute>>() {
             @Override
             public void onResponse(Call<ArrayList<StatoSalute>> call, Response<ArrayList<StatoSalute>> response) {
-                Toast.makeText(Stato_salute.this, response.body().get(0).getDescrizione(), Toast.LENGTH_LONG).show();
+                //listview
+                ListView Mylist = (ListView) findViewById(R.id.listView1);
+                ArrayList<String> StatoSalute = new ArrayList<String>();
+                for(int i=0; i<response.body().size();i++){
+                    StatoSalute.add(response.body().get(i).getOra() + "\n" +response.body().get(i).getNome() + ":  " +response.body().get(i).getDescrizione());
+                }
+
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,StatoSalute);
+                Mylist.setAdapter(adapter);
+
             }
 
             @Override

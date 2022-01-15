@@ -33,6 +33,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_malattie_gravi_genitori);
+            Toolbar t = findViewById(R.id.toolbar_malattie_gravi_gen);
+            setSupportActionBar(t);
+            getSupportActionBar().setTitle("Malattie Gravi");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             info_add = findViewById(R.id.aggiungi_info_malattia);
 
             extra = getIntent();

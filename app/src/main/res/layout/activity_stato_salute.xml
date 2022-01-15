@@ -16,4 +16,17 @@
 
         />
 
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="410dp"
+        android:layout_height="585dp"
+        android:layout_below="@+id/toolbar_stato_salute"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:isScrollContainer="true"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_stato_salute" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,7 +74,6 @@ public class Valutazioni_libretto extends AppCompatActivity {
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,voti);
                 Mylist.setAdapter(adapter);
-
             }
 
             @Override
