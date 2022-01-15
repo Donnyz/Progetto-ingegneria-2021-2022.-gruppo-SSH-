@@ -33,7 +33,12 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 
+import java.util.HashMap;
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class locationService extends Service {
 
@@ -45,10 +50,24 @@ public class locationService extends Service {
                 double latitude = locationResult.getLastLocation().getLatitude();
                 double longitude = locationResult.getLastLocation().getLongitude();
 
-                /**
-                 * qui inviare la posizione sul server
-                 * */
-                Log.d("location_update", latitude + "," + longitude);
+                HashMap<String, String> map = new HashMap<>();
+                map.put("latitudine",latitude+"");
+
+                map.put("longitudine",longitude+"");
+                map.put("id",MainActivity.getP().getId());
+                Call<Void> call = MainActivity.retrofitInterface.executeInviaPosizione(map);
+                call.enqueue(new Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        Toast.makeText(locationService.this,  "Invio posizione", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+                        //Toast.makeText(locationService.this,  t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+                Log.d("location_update", map.get("latitudine") + "," + map.get("longitudine"));
 
 
             }

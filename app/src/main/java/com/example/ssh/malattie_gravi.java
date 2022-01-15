@@ -5,6 +5,14 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class malattie_gravi extends AppCompatActivity {
     Intent extra;
@@ -18,9 +26,10 @@ public class malattie_gravi extends AppCompatActivity {
         setSupportActionBar(t);
         getSupportActionBar().setTitle("Malattie Gravi");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         extra = getIntent();
         p = utils.ottieni(extra);
+
+
 
     }
 }

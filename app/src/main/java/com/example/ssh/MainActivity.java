@@ -42,9 +42,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
 
-    private static Retrofit retrofit;
-    private static RetrofitInterface retrofitInterface;
+
+
     protected static String BASE_URL = "http://10.0.2.2:3000";
+    public static Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+    public static RetrofitInterface retrofitInterface = retrofit.create(RetrofitInterface.class);
     private static Persona p = new Persona();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Gson gson = new GsonBuilder().setLenient().create();
 
-        retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
-        retrofitInterface = retrofit.create(RetrofitInterface.class);
         if (checkPermission()) {
             // if permission is already granted display a toast message
             Toast.makeText(this, "Permission Granted..", Toast.LENGTH_SHORT).show();
