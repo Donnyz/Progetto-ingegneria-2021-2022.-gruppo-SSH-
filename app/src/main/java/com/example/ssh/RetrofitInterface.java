@@ -43,4 +43,12 @@ public interface RetrofitInterface {
     @POST("/ottieni_posizione")
     Call<ArrayList<Posizione>> executeOttieniPosizione(@Body HashMap<String,String> map);
 
+    @POST("/stato")
+    Call<ArrayList<StatoSalute>> executeStato(@Body HashMap<String,String> map);
+
+    @POST("/inserimento_stato")
+    Call<Void> executeInsStato(@Body HashMap<String,String> map);
+
+
+
 }
