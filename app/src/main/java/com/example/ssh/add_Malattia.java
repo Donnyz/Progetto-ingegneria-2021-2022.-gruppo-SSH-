@@ -1,6 +1,7 @@
 package com.example.ssh;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,8 +30,12 @@ public class add_Malattia extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         setContentView(R.layout.activity_add_malattia);
+        Toolbar t = findViewById(R.id.toolbar_aggiungi_malattia);
+        setSupportActionBar(t);
+        getSupportActionBar().setTitle("Aggiungi Malattia");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         nome_mal = findViewById(R.id.nome_malattia);
         info_mal = findViewById(R.id.info_Malattia);
         numero = findViewById(R.id.numerodaChiamare);
@@ -57,6 +62,7 @@ public class add_Malattia extends AppCompatActivity {
                         Toast.makeText(add_Malattia.this,  t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
+                startActivity(utils.new_intent(p,Malattie_gravi_Genitori.class,getApplicationContext()));
             }
         });
 

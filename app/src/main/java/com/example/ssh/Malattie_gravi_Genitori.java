@@ -51,8 +51,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
                     ListView Mylist = (ListView) findViewById(R.id.listView1);
                     ArrayList<String> malattiegravi = new ArrayList<String>();
                     for(int i=0; i<response.body().size();i++){
-                        malattiegravi.add("Nome : \n"+ response.body().get(i).getNome() +
-                                "\nDescrizione:  "+response.body().get(i).getDescrizione()+"\n" + "\nNumero da chiamare:" +response.body().get(i).getNumero());
+                        malattiegravi.add("Nome: "+ response.body().get(i).getNome() +
+                                "\nDescrizione:  "+response.body().get(i).getDescrizione()+ "\nNumero da chiamare:" +response.body().get(i).getNumero()+"\n");
                     }
 
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,malattiegravi);

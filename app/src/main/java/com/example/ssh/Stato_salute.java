@@ -5,7 +5,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ public class Stato_salute extends AppCompatActivity {
 
     Intent extra;
     Persona p;
+    private Button add_stato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class Stato_salute extends AppCompatActivity {
         setSupportActionBar(t);
         getSupportActionBar().setTitle("Stato Salute");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        add_stato = findViewById(R.id.addStato);
 
         extra = getIntent();
 
@@ -58,5 +62,9 @@ public class Stato_salute extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void nuovo_stato(View v){
+        startActivity(utils.new_intent(p,AddStatoSalute.class,getApplicationContext()));
     }
 }

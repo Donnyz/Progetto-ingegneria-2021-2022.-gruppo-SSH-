@@ -58,6 +58,7 @@ public class add_problemiApprendimento extends AppCompatActivity {
                         Toast.makeText(add_problemiApprendimento.this,  t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
+                startActivity(utils.new_intent(p,Papprendimento.class,getApplicationContext()));
             }
         });
     }

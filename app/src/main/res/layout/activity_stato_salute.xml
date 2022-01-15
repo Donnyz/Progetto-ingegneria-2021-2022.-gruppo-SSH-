@@ -18,15 +18,29 @@
 
     <ListView
         android:id="@+id/listView1"
-        android:layout_width="410dp"
-        android:layout_height="585dp"
+        android:layout_width="409dp"
+        android:layout_height="487dp"
         android:layout_below="@+id/toolbar_stato_salute"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:isScrollContainer="true"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/addStato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_stato_salute"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <Button
+        android:id="@+id/addStato"
+        android:layout_width="127dp"
+        android:layout_height="49dp"
+        android:onClick="nuovo_stato"
+        android:text="aggiungi nuovo stato"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_stato_salute" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_stato_salute"
+        app:layout_constraintVertical_bias="0.886" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

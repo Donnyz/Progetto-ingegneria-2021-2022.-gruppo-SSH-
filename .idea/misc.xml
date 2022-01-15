@@ -64,6 +64,8 @@
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/back_botton.xml" value="0.1" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/bacl.xlm" value="0.20052083333333334" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/menu.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_add_problemi_apprendimento.xml" value="0.32447916666666665" />
+        <entry key="app/src/main/res/layout/activity_add_statosalute.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/activity_avvisi.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_avvisiatutti.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_avvisinsegnante.xml" value="0.17760416666666667" />
@@ -72,9 +74,12 @@
         <entry key="app/src/main/res/layout/activity_documento.xml" value="0.178125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33583000772269656" />
         <entry key="app/src/main/res/layout/activity_malattie_gravi.xml" value="0.32447916666666665" />
+        <entry key="app/src/main/res/layout/activity_malattie_gravi_genitori.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/activity_note.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/activity_papprendimento.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/activity_qr_reader.xml" value="0.13179347826086957" />
         <entry key="app/src/main/res/layout/activity_schermata_principale.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_scuola.xml" value="0.32447916666666665" />
         <entry key="app/src/main/res/layout/activity_stato_salute.xml" value="0.32447916666666665" />
       </map>
     </option>

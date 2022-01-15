@@ -33,7 +33,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
+        <activity
+            android:name=".AddStatoSalute"
+            android:exported="false"
+            android:parentActivityName=".Stato_salute"/>
         <activity
             android:name=".add_problemiApprendimento"
             android:exported="false"

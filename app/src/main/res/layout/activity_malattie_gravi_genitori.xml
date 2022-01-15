@@ -17,14 +17,13 @@
 
     <ListView
         android:id="@+id/listView1"
-        android:layout_width="364dp"
+        android:layout_width="396dp"
         android:layout_height="541dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="92dp"
         android:isScrollContainer="true"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/aggiungi_info_malattia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
