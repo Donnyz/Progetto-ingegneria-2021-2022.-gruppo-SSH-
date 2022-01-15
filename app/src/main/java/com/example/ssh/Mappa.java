@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -16,6 +17,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.ssh.databinding.ActivityMappaGenitoreBinding;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Mappa extends FragmentActivity implements OnMapReadyCallback {
 
@@ -50,11 +58,20 @@ public class Mappa extends FragmentActivity implements OnMapReadyCallback {
         checkPermission();
         mMap.setMyLocationEnabled(true);
 
-        /**
-         * qui dentro ottenere tutte le posizioni dalla mappa dei  genitoir.
-         * fatto questo si può disegnare aggiungendo un marker per ogni posizione.
-         *
-         */
+        HashMap<String, String> map = new HashMap<>();
+        map.put("id",MainActivity.getP().getId());
+        Call<ArrayList<Posizione>> call = MainActivity.retrofitInterface.executeOttieniPosizione(map);
+        call.enqueue(new Callback<ArrayList<Posizione>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Posizione>> call, Response<ArrayList<Posizione>> response) {
+                Toast.makeText(Mappa.this,  response.body().get(0).getLatitudine(), Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Posizione>> call, Throwable t) {
+                Toast.makeText(Mappa.this,  t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 
