@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Papprendimento extends AppCompatActivity {
+    Intent extra;
+    Persona p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,10 @@ public class Papprendimento extends AppCompatActivity {
         setSupportActionBar(t);
         getSupportActionBar().setTitle("Problemi Apprendimento");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        extra = getIntent();
+        p = utils.ottieni(extra);
+
     }
 
     public void add_problemiDiApprendimento(View v){

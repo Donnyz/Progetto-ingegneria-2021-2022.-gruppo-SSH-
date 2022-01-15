@@ -58,6 +58,9 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity  {
 
     private static final int REQUEST_CODE_LOCATION_PERMISSION =1;
 
+    Persona persona;
+    Intent extra;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +73,9 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity  {
         getSupportActionBar().setTitle("Documento e Posizione");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         s = findViewById(R.id.switch1);
+
+        extra = getIntent();
+        persona = utils.ottieni(extra);
 
         s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -144,8 +150,7 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity  {
 
 
     public void goto_documento(View v) {
-        startActivity(
-                new Intent(this, Documento.class)
+        startActivity(utils.new_intent(p,Documento.class,getApplicationContext())
         );
     }
 

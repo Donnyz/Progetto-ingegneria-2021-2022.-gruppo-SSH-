@@ -2,6 +2,7 @@ package com.example.ssh;
 
 import static com.example.ssh.MainActivity.BASE_URL;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -33,6 +34,9 @@ public class Avvisi_atutti extends AppCompatActivity { //sezione per scrivere un
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
 
+    Intent extra;
+    Persona persona;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,9 @@ public class Avvisi_atutti extends AppCompatActivity { //sezione per scrivere un
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Compila avviso");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        extra = getIntent();
+        persona = utils.ottieni(extra);
 
         parent_name =  findViewById(R.id.Parent_name);
         object = findViewById(R.id.object);

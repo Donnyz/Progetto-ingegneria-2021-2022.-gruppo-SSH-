@@ -2,6 +2,7 @@ package com.example.ssh;
 
 import static com.example.ssh.MainActivity.BASE_URL;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -23,10 +24,16 @@ public class Note_libretto extends AppCompatActivity {
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
 
+    Intent extra;
+    Persona persona;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
+
+        extra = getIntent();
+        persona = utils.ottieni(extra);
 
         //toolbar
         Toolbar toolbar = findViewById(R.id.toolbar_note_libretto);

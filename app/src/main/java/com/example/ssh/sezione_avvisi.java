@@ -9,6 +9,9 @@ import android.view.View;
 
 public class sezione_avvisi extends AppCompatActivity {
 
+    Intent extra;
+    Persona persona;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,17 +22,20 @@ public class sezione_avvisi extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Avvisi");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        extra =getIntent();
+        persona  = utils.ottieni(extra);
     }
 
     public void goto_avvisiPerMe(View view){
-        startActivity(new Intent(this,Condivisi_con_me.class));
+        startActivity(utils.new_intent(persona, Condivisi_con_me.class,getApplicationContext()));
     }
 
     public void goto_avvisiPerTutti(View view){
-        startActivity(new Intent(this,Avvisi_atutti.class));
+        startActivity(utils.new_intent(persona,Avvisi_atutti.class,getApplicationContext()));
     }
 
     public void goto_avvisiPerProf(View view){
-        startActivity(new Intent(this,Avvisi_insegnante.class));
+        startActivity(utils.new_intent(persona,Avvisi_insegnante.class,getApplicationContext()));
     }
 }

@@ -2,6 +2,7 @@ package com.example.ssh;
 
 import static com.example.ssh.MainActivity.BASE_URL;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -33,10 +34,16 @@ public class Valutazioni_libretto extends AppCompatActivity {
 
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
+
+    Intent extra;
+    Persona persona;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_valutazioni_libretto);
+
+        extra = getIntent();
+        persona = utils.ottieni(extra);
 
         //toolbar
         Toolbar toolbar = findViewById(R.id.toolbar_valutazioni_libretto);

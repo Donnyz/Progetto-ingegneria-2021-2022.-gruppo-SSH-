@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Documento_o_Mappa_Scelta_professori extends AppCompatActivity {
+    Intent extra;
+    Persona persona;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,9 @@ public class Documento_o_Mappa_Scelta_professori extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Scegli tra Documento o mappa ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        extra = getIntent();
+        persona = utils.ottieni(extra);
     }
 
     public void goto_documento(View v){

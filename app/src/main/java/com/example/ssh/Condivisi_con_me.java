@@ -2,6 +2,7 @@ package com.example.ssh;
 
 import static com.example.ssh.MainActivity.BASE_URL;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -25,6 +26,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Condivisi_con_me extends AppCompatActivity { //sezione per avvisi condivisi con me da parte degli insegnanti o altri genitori
     private static Retrofit retrofit;
     private static RetrofitInterface retrofitInterface;
+
+    Intent extra;
+    Persona persona;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +40,10 @@ public class Condivisi_con_me extends AppCompatActivity { //sezione per avvisi c
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Avvisi condivisi con me");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        extra = getIntent();
+        persona = utils.ottieni(extra);
+
         Gson gson = new GsonBuilder().setLenient().create();
 
 

@@ -3,9 +3,12 @@ package com.example.ssh;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class malattie_gravi extends AppCompatActivity {
+    Intent extra;
+    Persona p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,5 +18,9 @@ public class malattie_gravi extends AppCompatActivity {
         setSupportActionBar(t);
         getSupportActionBar().setTitle("Malattie Gravi");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        extra = getIntent();
+        p = utils.ottieni(extra);
+
     }
 }
