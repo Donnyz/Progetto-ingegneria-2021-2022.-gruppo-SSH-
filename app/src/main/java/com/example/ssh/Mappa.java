@@ -64,7 +64,8 @@ public class Mappa extends FragmentActivity implements OnMapReadyCallback {
         call.enqueue(new Callback<ArrayList<Posizione>>() {
             @Override
             public void onResponse(Call<ArrayList<Posizione>> call, Response<ArrayList<Posizione>> response) {
-                Toast.makeText(Mappa.this,  response.body().get(0).getLatitudine(), Toast.LENGTH_LONG).show();
+                for (Posizione x : response.body())
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(Double.parseDouble(x.getLatitudine()),Double.parseDouble(x.getLongitudine()))).title(x.getBambino()));
             }
 
             @Override

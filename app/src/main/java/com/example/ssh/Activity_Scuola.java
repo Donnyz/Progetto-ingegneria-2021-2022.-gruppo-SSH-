@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 
@@ -30,7 +31,8 @@ public class Activity_Scuola extends AppCompatActivity {
     }
 
     public void goto_Doc_mappa(View v) {
-        if(p.getInsegna()){
+
+        if(MainActivity.getP().getInsegna()){
             startActivity(
                     utils.new_intent(p,Documento_o_Mappa_Scelta_professori.class,getApplicationContext())
             );
