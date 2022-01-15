@@ -35,8 +35,7 @@ public class Documento_o_Mappa_Scelta_professori extends AppCompatActivity {
     }
 
     public void goto_mappa(View v){
-        startActivity(
-                new Intent(this, Mappa.class)
+        startActivity(utils.new_intent(persona,Mappa.class,getApplicationContext())
         );
     }
 }

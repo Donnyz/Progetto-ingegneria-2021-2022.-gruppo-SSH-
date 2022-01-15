@@ -19,12 +19,14 @@ public class Activity_Salute extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salute);
 
+        extra = getIntent();
+        p = utils.ottieni(extra);
+
+
         Toolbar t = findViewById(R.id.toolbar_salute);
         setSupportActionBar(t);
         getSupportActionBar().setTitle("Salute");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        extra = getIntent();
-        p = utils.ottieni(extra);
 
     }
 

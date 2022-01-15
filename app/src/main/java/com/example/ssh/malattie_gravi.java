@@ -29,6 +29,8 @@ public class malattie_gravi extends AppCompatActivity {
         extra = getIntent();
         p = utils.ottieni(extra);
 
+        //todo
+
 
 
     }

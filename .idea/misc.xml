@@ -34,6 +34,8 @@
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/drawable/left_arrow_background.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_add_malattia.xml" value="0.25" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisi.xml" value="0.1640625" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisiatutti.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisinsegnante.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map_scelta.xml" value="0.22" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map_scelta_prof.xml" value="0.17831813576494426" />
@@ -47,15 +49,16 @@
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_malattie_gravi_genitori.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_mappa.xml" value="0.178125" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_mappa_genitore.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_note.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_papprendimento.xml" value="0.33" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_qr_generator.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_qr_reader.xml" value="0.16" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_qr_result.xml" value="0.19114583333333332" />
-        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_salute.xml" value="0.5" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_salute.xml" value="0.25" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_schermata_principale.xml" value="0.25" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_scuola.xml" value="0.33" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_stato_salute.xml" value="0.178125" />
-        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_valutazioni_libretto.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_valutazioni_libretto.xml" value="0.25" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/toolbar.xml" value="0.17604166666666668" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/back.xml" value="0.33" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/menu/back_botton.xml" value="0.1" />

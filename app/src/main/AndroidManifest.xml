@@ -21,9 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".add_problemiApprendimento"
-            android:exported="false" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,17 +35,17 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Mappa_genitore"
+            android:name=".add_problemiApprendimento"
             android:exported="false"
-            android:label="@string/title_activity_mappa_genitore"
-            android:parentActivityName=".doc_map_scelta" />
+            android:parentActivityName=".Papprendimento"/>
         <activity
             android:name=".add_Malattia"
             android:exported="false"
             android:parentActivityName=".Malattie_gravi_Genitori" />
         <activity
             android:name=".Malattie_gravi_Genitori"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Activity_Salute"/>
         <activity
             android:name=".Condivisi_con_me"
             android:exported="true"
