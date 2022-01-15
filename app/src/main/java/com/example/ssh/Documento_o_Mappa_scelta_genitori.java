@@ -150,8 +150,7 @@ public class Documento_o_Mappa_scelta_genitori extends AppCompatActivity  {
 
 
     public void goto_documento(View v) {
-        startActivity(utils.new_intent(p,Documento.class,getApplicationContext())
-        );
+        startActivity(new Intent(this, Documento.class));
     }
 
 

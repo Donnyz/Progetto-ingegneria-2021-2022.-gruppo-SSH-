@@ -65,7 +65,7 @@ public class Mappa extends FragmentActivity implements OnMapReadyCallback {
             @Override
             public void onResponse(Call<ArrayList<Posizione>> call, Response<ArrayList<Posizione>> response) {
                 for (Posizione x : response.body())
-                    mMap.addMarker(new MarkerOptions().position(new LatLng(Double.parseDouble(x.getLatitudine()),Double.parseDouble(x.getLongitudine()))).title(x.getBambino()));
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(Double.parseDouble(x.getLatitudine()),Double.parseDouble(x.getLongitudine()))).title(x.getBambino()).visible(true));
             }
 
             @Override

@@ -40,7 +40,6 @@ public class Papprendimento extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<ProblemaApprendimento>> call, Response<ArrayList<ProblemaApprendimento>> response) {
 
-
                 ListView Mylist = (ListView) findViewById(R.id.listView1);
                 ArrayList<String> papprendimento = new ArrayList<String>();
                 for(int i=0; i<response.body().size();i++){
@@ -66,5 +65,7 @@ public class Papprendimento extends AppCompatActivity {
     public void add_problemiDiApprendimento(View v){
         startActivity(new Intent(this,add_problemiApprendimento.class));
     }
+
+
 
 }

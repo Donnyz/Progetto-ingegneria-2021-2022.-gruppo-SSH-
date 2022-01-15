@@ -33,9 +33,12 @@
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/drawable/left_arrow_background.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_add_malattia.xml" value="0.25" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_add_problemi_apprendimento.xml" value="0.25" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_add_statosalute.xml" value="0.1762917933130699" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisi.xml" value="0.1640625" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisiatutti.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisinsegnante.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_avvisiperme.xml" value="0.1762917933130699" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map_scelta.xml" value="0.22" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_map_scelta_prof.xml" value="0.17831813576494426" />
@@ -43,6 +46,7 @@
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_or_mapp.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_doc_or_mappa.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_documento.xml" value="0.2" />
+        <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_documento_omappa_scelta_genitori.xml" value="0.1" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_libretto.xml" value="0.178125" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/loren/Documents/GitHub/Progetto-ingegneria-2021-2022.-gruppo-SSH-/app/src/main/res/layout/activity_malattie_gravi.xml" value="0.2037037037037037" />

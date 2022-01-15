@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#6969EC"
     tools:context=".AddStatoSalute">
 
     <include
@@ -18,23 +18,26 @@
 
     <EditText
         android:id="@+id/nome_ragazzo"
-        android:layout_width="319dp"
-        android:layout_height="51dp"
+        android:layout_width="249dp"
+        android:layout_height="48dp"
         android:hint="nome della persona"
         android:text=""
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.185"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_aggiungi_stato"/>
+
 
     <EditText
         android:id="@+id/info_Malattia"
-        android:layout_width="319dp"
-        android:layout_height="116dp"
+
+        android:layout_width="249dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:gravity="top"
         android:hint="Descrizione stato salute"
@@ -45,15 +48,16 @@
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.341" />
+
 
     <EditText
         android:id="@+id/ora"
-        android:layout_width="225dp"
-        android:layout_height="49dp"
+        android:layout_width="249dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="308dp"
         android:ems="10"
         android:hint="Ora dello stato"
@@ -62,21 +66,25 @@
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <Button
         android:id="@+id/add"
-        android:layout_width="187dp"
-        android:layout_height="61dp"
+
+        android:layout_width="249dp"
+        android:layout_height="48dp"
         android:onClick="registra_stato"
         android:text="aggiungi stato"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.882" />
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#6969EC"
+        android:background="#ffffff"
+        app:layout_constraintVertical_bias="0.893" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
