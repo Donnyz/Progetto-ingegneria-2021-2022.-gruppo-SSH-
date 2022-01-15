@@ -39,7 +39,7 @@ public class Papprendimento extends AppCompatActivity {
         call.enqueue(new Callback<ArrayList<ProblemaApprendimento>>() {
             @Override
             public void onResponse(Call<ArrayList<ProblemaApprendimento>> call, Response<ArrayList<ProblemaApprendimento>> response) {
-                Toast.makeText(Papprendimento.this,  response.body().get(0).getAzione(), Toast.LENGTH_LONG).show();
+                
 
                 ListView Mylist = (ListView) findViewById(R.id.listView1);
                 ArrayList<String> papprendimento = new ArrayList<String>();

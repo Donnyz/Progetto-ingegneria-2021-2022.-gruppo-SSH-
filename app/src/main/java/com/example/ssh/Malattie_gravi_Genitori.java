@@ -38,12 +38,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
             extra = getIntent();
             p = utils.ottieni(extra);
             HashMap<String, String> map = new HashMap<>();
-            map.put("id",p.getId());
+            map.put("id",MainActivity.getP().getId());
             Call<ArrayList<Malattia>> call = MainActivity.retrofitInterface.executeMalattia(map);
             call.enqueue(new Callback<ArrayList<Malattia>>() {
                 @Override
                 public void onResponse(Call<ArrayList<Malattia>> call, Response<ArrayList<Malattia>> response) {
-                    Toast.makeText(Malattie_gravi_Genitori.this,  response.body().get(0).getNome(), Toast.LENGTH_LONG).show();
+
                     ListView Mylist = (ListView) findViewById(R.id.listView1);
                     ArrayList<String> malattiegravi = new ArrayList<String>();
                     for(int i=0; i<response.body().size();i++){
