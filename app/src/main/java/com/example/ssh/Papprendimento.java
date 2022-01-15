@@ -34,7 +34,7 @@ public class Papprendimento extends AppCompatActivity {
         p = utils.ottieni(extra);
         
         HashMap<String, String> map = new HashMap<>();
-        map.put("id",p.getId());
+        map.put("id",MainActivity.getP().getID());
         Call<ArrayList<ProblemaApprendimento>> call = MainActivity.retrofitInterface.executeProblema(map);
         call.enqueue(new Callback<ArrayList<ProblemaApprendimento>>() {
             @Override
