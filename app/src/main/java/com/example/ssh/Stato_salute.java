@@ -50,10 +50,8 @@ public class Stato_salute extends AppCompatActivity {
                 for(int i=0; i<response.body().size();i++){
                     StatoSalute.add(response.body().get(i).getOra() + "\n" +response.body().get(i).getNome() + ":  " +response.body().get(i).getDescrizione());
                 }
-
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1,StatoSalute);
                 Mylist.setAdapter(adapter);
-
             }
 
             @Override

@@ -65,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/data"
         android:layout_width="223dp"
         android:layout_height="45dp"

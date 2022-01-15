@@ -49,7 +49,7 @@ public class AddStatoSalute extends AppCompatActivity{
                 HashMap<String, String> map = new HashMap<>();
                 map.put("id",MainActivity.getP().getId());
                 map.put("nome",nome_ragazzo.getText().toString());
-                map.put("dataeora",ora.getText().toString() + " " +data.getText().toString());
+                map.put("ora",ora.getText().toString());
                 map.put("descrizione",descrizione.getText().toString());
                 Call<Void> call = MainActivity.retrofitInterface.executeInsMalattia(map);
                 call.enqueue(new Callback<Void>() {
