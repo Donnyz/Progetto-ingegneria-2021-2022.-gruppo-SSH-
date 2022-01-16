@@ -49,7 +49,7 @@ public class AddStatoSalute extends AppCompatActivity{
                 map.put("nome",nome_ragazzo.getText().toString());
                 map.put("ora",ora.getText().toString());
                 map.put("descrizione",descrizione.getText().toString());
-                Call<Void> call = MainActivity.retrofitInterface.executeInsMalattia(map);
+                Call<Void> call = MainActivity.retrofitInterface.executeInsStato(map);
                 call.enqueue(new Callback<Void>() {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
