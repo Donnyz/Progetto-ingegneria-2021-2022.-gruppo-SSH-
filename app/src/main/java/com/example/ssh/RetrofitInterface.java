@@ -47,7 +47,7 @@ public interface RetrofitInterface {
     Call<ArrayList<StatoSalute>> executeStato(@Body HashMap<String,String> map);
 
     @POST("/inserimento_stato")
-    Call<Void> executeInsStato(@Body HashMap<String,String> map);
+    Call<Void> executeInsstato(@Body HashMap<String,String> map);
 
 
 
